@@ -1,9 +1,7 @@
 import React, { Component } from 'react';
-import './App.css';
 import Header from './components/Header/Header';
-import IconItem from './components/Header/IconItem';
-import HeaderTitle from './components/Header/HeaderTitle';
-import MenuButton from './components/Header/MenuButton';
+import Hero from './components/Hero/Hero';
+
 
 
 
@@ -29,11 +27,8 @@ class App extends Component {
 
     return (
       <div>
-      <Header>
-      <IconItem>Logo</IconItem>
-        <HeaderTitle> Soccer addict </HeaderTitle>
-        <MenuButton> Menu </MenuButton>
-      </Header>
+      <Header />
+      <Hero />
 
       </div>
 

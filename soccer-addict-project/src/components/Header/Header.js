@@ -1,16 +1,30 @@
-import React from "react";
-import PropTypes from "prop-types";
-import styled from 'styled-components';
-import {colors} from '../../Styles/Variables';
+import React, { Component } from 'react';
+import HeaderBox from './HeaderBox';
+import IconItem from './IconItem';
+import HeaderTitle from './HeaderTitle';
+import MenuButton from './MenuButton';
 
-const Header = styled.div`
-width: 100%;
-display: flex;
-flex-direction: row;
-height: 20vh;
-color: black;
-background: ${colors.primary};
-`;
+class Header extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      filterText :'',
+      characters: []
+    }
+  }
 
+  render() {
+    return (
+      <div>
+      <HeaderBox>
+      <IconItem>Logo</IconItem>
+        <HeaderTitle> Soccer addict </HeaderTitle>
+        <MenuButton> Primera division </MenuButton>
+        <MenuButton> Serie A </MenuButton>
+      </HeaderBox>
+      </div>
+    );
+  }
+}
 
 export default Header;
