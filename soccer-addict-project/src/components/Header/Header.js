@@ -18,7 +18,7 @@ class Header extends Component {
       <div>
       <HeaderBox>
       <IconItem>Logo</IconItem>
-        <HeaderTitle> Soccer addict </HeaderTitle>
+        <HeaderTitle> Futból </HeaderTitle>
         <MenuButton> Primera division </MenuButton>
         <MenuButton> Serie A </MenuButton>
       </HeaderBox>
