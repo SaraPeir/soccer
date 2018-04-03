@@ -3,6 +3,7 @@ import HeaderBox from './HeaderBox';
 import IconItem from './IconItem';
 import HeaderTitle from './HeaderTitle';
 import MenuButton from './MenuButton';
+import { BrowserRouter, Link, Route, Switch } from 'react-router-dom';
 
 class Header extends Component {
   constructor(props) {
@@ -17,10 +18,12 @@ class Header extends Component {
     return (
       <div>
       <HeaderBox>
-      <IconItem>Logo</IconItem>
+      <IconItem><Link to={`/`} style={{ textDecoration: 'none' }}>Logo </Link></IconItem>
         <HeaderTitle> Futból </HeaderTitle>
+        <MenuButton><Link to={`/`} style={{ textDecoration: 'none' }}>Home </Link></MenuButton>
         <MenuButton> Primera division </MenuButton>
-        <MenuButton> Serie A </MenuButton>
+        <MenuButton><Link to={`/class`} style={{ textDecoration: 'none' }}>Serie A </Link></MenuButton>
+
       </HeaderBox>
       </div>
     );
