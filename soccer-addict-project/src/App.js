@@ -23,6 +23,7 @@ class App extends Component {
       Promise.all(combinedData).then(d => {
         let footballData = this.state.data;
         footballData.push(d)
+        
         this.setState({
           data:footballData
         });
