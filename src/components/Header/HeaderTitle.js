@@ -10,6 +10,7 @@ background: ${colors.primary};
 width: 60%;
 line-height: 10vh;
 height: 100%;
+
 border: 1px solid ${colors.light};
 `;
 

@@ -8,6 +8,7 @@ const IconItem = styled.div`
 width: 20%;
 height: 100%;
 border: 1px solid ${colors.light};
+font-size: 30px;
 `;
 
 

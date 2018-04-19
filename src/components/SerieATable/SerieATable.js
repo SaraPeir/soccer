@@ -13,6 +13,9 @@ class SerieATable extends Component {
     if (list !== undefined) {
 
       let classifica =  list.map((positionTeam, index)=>{
+//positionTeam es uno de los dos arrays que se forman dentro el array contenido en listDAta:
+//listData = [[positionTeam[0], positionTeam[1]]]
+//para verlo mejor, despues del debugger into la consola escribe footballData.length y luego footballData[0].length para darte cuenta de lo que pasó
 
         return (
           <div key={index}>

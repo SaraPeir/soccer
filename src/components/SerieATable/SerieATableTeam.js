@@ -18,8 +18,6 @@ class SerieATableTeam extends Component {
 
             <SerieATeamTableData>
           <p>{this.props.team}</p>
-          
-        <img src={this.props.symbol} />
           </SerieATeamTableData>
 
           <SerieATeamTableData>

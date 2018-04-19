@@ -10,6 +10,7 @@ flex-direction: row;
 position: fixed;
 height: 10vh;
 color: black;
+
 background: ${colors.primary};
 z-index: 100;
 `;

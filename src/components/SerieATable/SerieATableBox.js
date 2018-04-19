@@ -5,6 +5,7 @@ import {colors} from '../../Styles/Variables';
 
 export const SerieATableBox = styled.div`
 padding-top: 100px;
+padding-bottom: 100px;
 width: 100%;
 background: yellow;
 text-align: center;

@@ -8,10 +8,7 @@ import { BrowserRouter, Link, Route, Switch } from 'react-router-dom';
 class Header extends Component {
   constructor(props) {
     super(props);
-    this.state = {
-      filterText :'',
-      characters: []
-    }
+
   }
 
   render() {
@@ -20,9 +17,8 @@ class Header extends Component {
       <HeaderBox>
       <IconItem><Link to={`/`} style={{ textDecoration: 'none' }}>Logo </Link></IconItem>
         <HeaderTitle> Futból </HeaderTitle>
-        <MenuButton><Link to={`/`} style={{ textDecoration: 'none' }}>Home </Link></MenuButton>
-        <MenuButton> Primera division </MenuButton>
-        <MenuButton><Link to={`/class`} style={{ textDecoration: 'none' }}>Serie A </Link></MenuButton>
+      <Link to={`/`} style={{ textDecoration: 'none' }}>  <MenuButton>Home </MenuButton></Link>
+        <Link to={`/class`} style={{ textDecoration: 'none' }}><MenuButton>Serie A </MenuButton></Link>
 
       </HeaderBox>
       </div>
@@ -31,3 +27,5 @@ class Header extends Component {
 }
 
 export default Header;
+
+//<MenuButton> Primera division </MenuButton>
