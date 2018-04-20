@@ -11,7 +11,6 @@ width: 80%;
 background: ${colors.primary};
 margin-left: auto;
 margin-right: auto;
-border: 1px solid ${colors.black};
 `;
 
 export default SerieATableContainerLegend;

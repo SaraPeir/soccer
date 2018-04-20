@@ -4,12 +4,14 @@ import styled from 'styled-components';
 import {colors} from '../../Styles/Variables';
 import SerieATeamTableContainer from './SerieATeamTableContainer';
 import SerieATeamTableData from './SerieATeamTableData';
+import SerieATableParagraph from './SerieATableParagraph';
 
 
 class SerieATableTeam extends Component {
 
   render() {
           return (
+
             <SerieATeamTableContainer>
 
             <SerieATeamTableData>
@@ -26,6 +28,7 @@ class SerieATableTeam extends Component {
 
 
             </SerieATeamTableContainer>
+
           );
         }
       }
