@@ -6,13 +6,11 @@ import {colors} from '../../Styles/Variables';
 const HeaderTitle = styled.div`
 color: ${colors.light};
 font-size: 35px;
+font-size: 35px;
 background: ${colors.primary};
-width: 60%;
-line-height: 10vh;
+text-align: center;
+width: 15%;
 height: 100%;
-
-border: 1px solid ${colors.light};
 `;
-
 
 export default HeaderTitle;

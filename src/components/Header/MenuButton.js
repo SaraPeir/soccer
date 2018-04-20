@@ -5,15 +5,15 @@ import {colors} from '../../Styles/Variables';
 
 const MenuButton = styled.div`
 color: ${colors.light};
-font-size: 40px;
+font-size: 25px;
 
 background: ${colors.primary};
 text-align: center;
-width: 100%;
+width: 150px;
 line-height: 10vh;
 height: 100%;
-border: 1px solid ${colors.light};
 cursor: pointer;
+transition: all 1s ease;
 &:hover {
 color: ${colors.primary};
 background: ${colors.light};
