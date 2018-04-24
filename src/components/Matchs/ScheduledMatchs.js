@@ -6,14 +6,12 @@ import MatchsDay from './MatchsDay';
 
 
 class ScheduledMatchs extends Component {
-
-
   render() {
     return (
       <div class="scheduled-matchs-box">
       <ButtonsContainer />
-<MatchsDay matchsDaysList = {this.props.matchsDay} start = {0} end = {20} />
-<MatchsDay matchsDaysList = {this.props.matchsDay} start = {20} end = {70}/>
+<MatchsDay matchsDaysList = {this.props.matchsDay} start = {0} end = {9}/>
+<MatchsDay matchsDaysList = {this.props.matchsDay} start = {10} end = {19}/>
       </div>
     );
   }
