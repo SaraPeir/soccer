@@ -12,25 +12,22 @@ class Header extends Component {
   constructor(props) {
     super(props);
   }
-
-  render() {
-    return (
-      <div>
-      <HeaderBox>
+render() {
+return (
+<div>
+<HeaderBox>
 <HeaderBoxLeft>
-      <IconItem><img src={soccerIcon}  height="90%" width="90%" /> </IconItem>
- <HeaderTitle>Futból</HeaderTitle>
+<IconItem><img src={soccerIcon}  height="90%" width="90%" /> </IconItem>
+ <HeaderTitle>Fútbol - Serie A</HeaderTitle>
 </HeaderBoxLeft>
-
 <HeaderBoxRight>
-      <Link to={`/`} style={{ textDecoration: 'none' }}>  <MenuButton>Home </MenuButton></Link>
-        <Link to={`/class`} style={{ textDecoration: 'none' }}><MenuButton>Serie A </MenuButton></Link>
+<Link to={`/`} style={{ textDecoration: 'none' }}>  <MenuButton>Home </MenuButton></Link>  <Link to={`/class`} style={{ textDecoration: 'none' }}><MenuButton>Lista </MenuButton></Link>
+<Link to={`/matchs`} style={{ textDecoration: 'none' }}><MenuButton>Partidos </MenuButton></Link>
 </HeaderBoxRight>
-
-      </HeaderBox>
-      </div>
-    );
-  }
+</HeaderBox>
+</div>
+);
+}
 }
 
 export default Header;

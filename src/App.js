@@ -3,6 +3,9 @@ import Header from './components/Header/Header';
 import Hero from './components/Hero/Hero';
 import Footer from './components/Footer/Footer';
 import SerieATable from './components/SerieATable/SerieATable';
+import Matchs from './components/Matchs/Matchs';
+import FinalizedMatchs from './components/Matchs/FinalizedMatchs';
+import ScheduledMatchs from './components/Matchs/ScheduledMatchs';
 import { BrowserRouter, Link, Route, Switch } from 'react-router-dom';
 
 class App extends Component {
@@ -10,7 +13,8 @@ constructor(props) {
 super(props);
 this.state = {
 data: [],
-teamData: []}
+teamData: []
+}
 }
 
 //http://api.football-data.org/v1/teams/113/fixtures
@@ -50,24 +54,24 @@ teamData: []}
 
 
 requestInfo() {
-var apiRequest1 =  fetch(`http://api.football-data.org/v1/competitions/456/leagueTable`, { headers:  {'X-Auth-Token': '6ec492bfca974605a2522176f0b354eb'}}).then(response => response.json());
-var apiRequest2 = fetch(`http://api.football-data.org/v1/competitions/456/teams`, {headers:  {'X-Auth-Token': '6ec492bfca974605a2522176f0b354eb'}}).then(response => response.json());
-var combinedData = [apiRequest1, apiRequest2];
-Promise.all(combinedData).then(d => {
-let footballData = this.state.data;
-footballData.push(d);
-this.setState({
-data:footballData
-});
-for (var i = 0; i < 20; i++) {
-fetch(d[0].standing[i]._links.team.href, {headers:  {'X-Auth-Token':'6ec492bfca974605a2522176f0b354eb'}}).then(response => response.json())
-.then(f => {const footballTeamData = this.state.teamData;
-footballTeamData.push(f)
-this.setState({
-teamData:footballTeamData
-});
-})
-}
+  var apiRequest1 =  fetch(`http://api.football-data.org/v1/competitions/456/leagueTable`, { headers:  {'X-Auth-Token': '6ec492bfca974605a2522176f0b354eb'}}).then(response => response.json());
+  var apiRequest2 = fetch(`http://api.football-data.org/v1/competitions/456/fixtures`, {headers:  {'X-Auth-Token': '6ec492bfca974605a2522176f0b354eb'}}).then(response => response.json());
+  var combinedData = [apiRequest1, apiRequest2];
+  Promise.all(combinedData).then(d => {
+  let footballData = this.state.data;
+  footballData.push(d);
+  this.setState({
+    data:footballData
+  });
+//   for (var i = 0; i < 20; i++) {
+//     fetch(d[0].standing[i]._links.team.href, {headers:  {'X-Auth-Token':'6ec492bfca974605a2522176f0b354eb'}}).then(response => response.json())
+//     .then(f => {const footballTeamData = this.state.teamData;
+//     footballTeamData.push(f)
+//     this.setState({
+//       teamData:footballTeamData
+//     });
+// })
+// }
 })
 }
 
@@ -107,8 +111,11 @@ this.requestInfo();
       <div>
       <Header />
       <Switch>
-      <Route exact path='/' component={ Hero } />
-      <Route path='/class' render={(props) => <SerieATable {...props} listData={data}/>}/>
+        <Route exact path='/' component={ Hero } />
+        <Route path='/class' render={(props) => <SerieATable {...props} listData={data}/>}/>
+        <Route  path='/matchs' component={ Matchs } />
+        <Route path='/scheduled' component={ ScheduledMatchs } />
+        <Route path='/finalized' component={ FinalizedMatchs } />
       </Switch>
       <Footer />
       </div>

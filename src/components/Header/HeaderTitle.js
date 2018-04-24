@@ -9,7 +9,7 @@ font-size: 35px;
 font-size: 35px;
 background: ${colors.primary};
 text-align: center;
-width: 15%;
+width: 40%;
 height: 100%;
 `;
 

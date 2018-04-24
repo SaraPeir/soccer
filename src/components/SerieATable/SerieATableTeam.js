@@ -10,25 +10,18 @@ import SerieATableParagraph from './SerieATableParagraph';
 class SerieATableTeam extends Component {
 
   render() {
-          return (
-
-            <SerieATeamTableContainer>
-
-            <SerieATeamTableData>
+    return (
+  <SerieATeamTableContainer>
+    <SerieATeamTableData>
           <p>{this.props.position}</p>
-          </SerieATeamTableData>
-
-            <SerieATeamTableData>
+    </SerieATeamTableData>
+    <SerieATeamTableData>
           <p>{this.props.team}</p>
-          </SerieATeamTableData>
-
-          <SerieATeamTableData>
+    </SerieATeamTableData>
+    <SerieATeamTableData>
         <p>{this.props.score}</p>
-        </SerieATeamTableData>
-
-
-            </SerieATeamTableContainer>
-
+    </SerieATeamTableData>
+  </SerieATeamTableContainer>
           );
         }
       }

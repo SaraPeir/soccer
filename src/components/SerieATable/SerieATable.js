@@ -9,9 +9,7 @@ import { BrowserRouter, Link, Route, Switch } from 'react-router-dom';
 class SerieATable extends Component {
   getResult() {  //Hay que ponerlo si no da error antes que lleguen los datos (no ve el array)
     const list =  this.props.listData;
-
     if (list !== undefined) {
-
       let classifica =  list.map((positionTeam, index)=>{
 //positionTeam es uno de los dos arrays que se forman dentro el array contenido en listDAta:
 //listData = [[positionTeam[0], positionTeam[1]]]
@@ -20,18 +18,18 @@ class SerieATable extends Component {
         return (
           <div key={index}>
 
-            <SerieATableTeam
+          <SerieATableTeam
 
-          position={positionTeam[0].standing.map((ps, index) => {
+            position={positionTeam[0].standing.map((ps, index) => {
             return <div key={index}>{ps.position}</div>})}
 
-          team={positionTeam[0].standing.map((tm, index) => {
+            team={positionTeam[0].standing.map((tm, index) => {
             return <div key={index}>{tm.teamName}</div>})}
 
-          symbol={positionTeam[0].standing.map((sb, index) => {
-            return <div key={index}>{sb.crestURI}</div>})}
 
-          score={positionTeam[0].standing.map((sc, index) => {
+//footballData[0][0].standing[0].teamName
+
+            score={positionTeam[0].standing.map((sc, index) => {
             return <div key={index}>{sc.points}</div>})}
             />
             </div>
@@ -57,7 +55,6 @@ class SerieATable extends Component {
             }
             return (
               <div>
-              <button><Link to={'/'} style={{ textDecoration: 'none' }}>Home </Link></button>
               <SerieATableBox>
               <h1>{captionTitle}</h1>
               <h2>Posiciones - Jornada #{day}</h2>
