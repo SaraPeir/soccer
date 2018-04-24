@@ -7,10 +7,10 @@ export const FooterBox = styled.div`
 width: 100%;
 display: flex;
 flex-direction: column;
-position: absolute;
+position: fixed;
 justify-content: center;
 align-items: center;
-top: 1050px;
+top: 650px;
 height: 25vh;
 background: ${colors.primary};
 z-index: 100;
