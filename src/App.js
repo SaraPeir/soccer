@@ -114,7 +114,7 @@ this.requestInfo();
         <Route exact path='/' component={ Hero } />
         <Route path='/class' render={(props) => <SerieATable {...props} listData={data}/>}/>
         <Route  path='/matchs' component={ Matchs } />
-        <Route path='/scheduled' render={(props) => <ScheduledMatchs {...props} matchsDay={data} matchsDayArray = {data} />} />
+        <Route path='/scheduled' render={(props) => <ScheduledMatchs {...props} matchsDay={data} />} />
         <Route path='/finalized' component={ FinalizedMatchs } />
       </Switch>
       <Footer />

@@ -9,8 +9,8 @@ class Footer extends Component {
     return (
       <div>
       <FooterBox>
-      <FooterTitle> Futból </FooterTitle>
-      <FooterText> Sara Ⓒ 2018 </FooterText>
+      <FooterTitle> Futból <FooterText> By Sara Ⓒ 2018 </FooterText></FooterTitle>
+
       </FooterBox>
       </div>
     );
@@ -19,4 +19,4 @@ class Footer extends Component {
 
 export default Footer;
 
-//
+//<FooterText> Sara Ⓒ 2018 </FooterText>

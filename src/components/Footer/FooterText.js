@@ -4,7 +4,7 @@ import styled from 'styled-components';
 import {colors} from '../../Styles/Variables';
 
 const FooterText = styled.p`
-display: block;
+display: inline;
 font-size: 12px;
 color:${colors.light};
 

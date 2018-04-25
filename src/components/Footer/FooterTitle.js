@@ -4,7 +4,7 @@ import styled from 'styled-components';
 import {colors} from '../../Styles/Variables';
 
 const FooterTitle = styled.p`
-display: block;
+display: inline;
 font-size: 20px;
 color:${colors.light};
 `;
