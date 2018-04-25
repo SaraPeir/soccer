@@ -4,7 +4,7 @@ import Hero from './components/Hero/Hero';
 import Footer from './components/Footer/Footer';
 import SerieATable from './components/SerieATable/SerieATable';
 import Matchs from './components/Matchs/Matchs';
-import FinalizedMatchs from './components/Matchs/FinalizedMatchs';
+import ToDoMatchs from './components/Matchs/ToDoMatchs';
 import ScheduledMatchs from './components/Matchs/ScheduledMatchs';
 import { BrowserRouter, Link, Route, Switch } from 'react-router-dom';
 
@@ -115,7 +115,7 @@ this.requestInfo();
         <Route path='/class' render={(props) => <SerieATable {...props} listData={data}/>}/>
         <Route  path='/matchs' component={ Matchs } />
         <Route path='/scheduled' render={(props) => <ScheduledMatchs {...props} matchsDay={data} />} />
-        <Route path='/finalized' component={ FinalizedMatchs } />
+<Route path='/programmed' render={(props) => <ToDoMatchs {...props} matchsDay={data} />} />
       </Switch>
       <Footer />
       </div>

@@ -9,8 +9,8 @@ class ButtonsContainer extends Component {
   render() {
           return (
         <div class="buttons-container">
-          <Link to={`/finalized`} style={{ textDecoration: 'none' }}><button type="button" name="button">Finalizados</button></Link>
-          <Link to={`/scheduled`} style={{ textDecoration: 'none' }}><button type="button" name="button">Scheduled</button></Link>
+          <Link to={`/programmed`} style={{ textDecoration: 'none' }}><button type="button" name="button">Partidos programados</button></Link>
+          <Link to={`/scheduled`} style={{ textDecoration: 'none' }}><button type="button" name="button">Partidos finalizados</button></Link>
         </div>
         );
       }
