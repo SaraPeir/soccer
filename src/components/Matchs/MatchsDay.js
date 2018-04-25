@@ -7,19 +7,20 @@ import MatchCard from './MatchCard';
 
 class MatchsDay extends Component {
 
-// matchDay(matchNumber){
-//   var matchDayNumber = '';
-//     if(this.props.matchsDaysList !== undefined){
-//       let length = this.props.matchsDaysList.length;
-//       if(length > 0) {
-// let matchNumber;
-// matchDayNumber = {this.props.matchsDaysList[0][1].fixtures[matchNumber].matchday}
-//     }
-//   return matchDayNumber;
-//     }
-//
-//     }
-// }
+
+
+  daysMatch(){
+var dayMatch = '';
+ if(this.props.matchsDaysList !== undefined){
+   let length = this.props.matchsDaysList.length;
+   if(length > 0) {
+ for (let i = this.props.start; i < this.props.end; i++){
+dayMatch = `Jornada #${this.props.matchsDaysList[0][1].fixtures[i].matchday}`
+ }
+return dayMatch;
+ }
+ }
+ }
 
 
    daysCards(){
@@ -44,12 +45,14 @@ return array;
 
 
   render() {
-const matchList = this.props.matchsDaysList;
+let matchList = this.props.matchsDaysListArray;
+let matchDayNumber = 'Hola';
+let dayNumber = this.props.dayNumber;
 let dayMatch = this.props.start;
     return (
       <div className ="scheduled-cards-whole-container">
       <div className ="title-container">
-      <h1>Jornada #1</h1>
+      <h1>{this.daysMatch()}</h1>
       </div>
       <div className="scheduled-cards-container">
     {this.daysCards()}

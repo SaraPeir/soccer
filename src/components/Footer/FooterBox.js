@@ -10,7 +10,7 @@ flex-direction: column;
 position: fixed;
 justify-content: center;
 align-items: center;
-top: 650px;
+top: 750px;
 height: 25vh;
 background: ${colors.primary};
 z-index: 100;

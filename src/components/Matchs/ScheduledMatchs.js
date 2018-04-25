@@ -10,7 +10,7 @@ class ScheduledMatchs extends Component {
     return (
       <div class="scheduled-matchs-box">
       <ButtonsContainer />
-<MatchsDay matchsDaysList = {this.props.matchsDay} start = {0} end = {9}/>
+<MatchsDay matchsDaysList = {this.props.matchsDay} matchsDaysListArray = {this.props.matchsDayArray} start = {0} end = {9} dayNumber = {0}/>
 <MatchsDay matchsDaysList = {this.props.matchsDay} start = {10} end = {19}/>
       </div>
     );
