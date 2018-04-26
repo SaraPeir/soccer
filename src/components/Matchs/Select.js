@@ -14,8 +14,6 @@ class Select extends Component {
 this.createSelect = this.createSelect.bind(this);
   }
 
-
-
 createSelect(){
 if(this.props.teamsArray !== undefined){
 if(this.props.teamsArray[0] !== undefined && this.props.teamsArray[0].length > 1){
@@ -24,14 +22,13 @@ let teamsInternalArray = this.props.teamsArray[0][0].standing;
 let options = teamsInternalArray.map((team, index) =>
 {return <option key={index} value={team.teamName}>{team.teamName}</option>});
 return <div class="select-container">
-<select>
+<select value = {this.props.selectedValue} onChange = {this.props.onChangeSelectTeam}>
 <option value={'Selecciona un equipo'}>Selecciona un equipo</option>
 {options}
 </select>
 </div>
 }
 }
-
 }
 
 //{this.createSelect()}
@@ -39,6 +36,7 @@ return <div class="select-container">
   render() {
     return (
         <div>
+
 {this.createSelect()}
         </div>
       );
