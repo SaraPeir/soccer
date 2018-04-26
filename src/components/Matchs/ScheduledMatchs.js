@@ -4,12 +4,19 @@ import { BrowserRouter, Link, Route, Switch } from 'react-router-dom';
 import ButtonsContainer from './ButtonsContainer';
 import MatchsDay from './MatchsDay';
 import MatchsDayRecovery from './MatchsDayRecovery';
+import Select from './Select';
 
 
 class ScheduledMatchs extends Component {
+  constructor(props) {
+  super(props);
+  }
+
   render() {
     return (
       <div class="scheduled-matchs-box">
+      <Select teamsArray = {this.props.teamsNamesArray} />
+
       <ButtonsContainer />
 
 

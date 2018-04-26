@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './ButtonsContainer.css';
+import './Select.css';
 import { BrowserRouter, Link, Route, Switch } from 'react-router-dom';
 
 //Hay que poner un map con cada nombre de equipos. Adémas hay que poner un Link con el nombre an ${...} , oppure:
@@ -9,12 +9,37 @@ import { BrowserRouter, Link, Route, Switch } from 'react-router-dom';
 //}
 
 class Select extends Component {
+  constructor(props) {
+  super(props);
+this.createSelect = this.createSelect.bind(this);
+  }
+
+
+
+createSelect(){
+if(this.props.teamsArray !== undefined){
+if(this.props.teamsArray[0] !== undefined && this.props.teamsArray[0].length > 1){
+let teamsInternalArray = this.props.teamsArray[0][0].standing;
+
+let options = teamsInternalArray.map((team, index) =>
+{return <option key={index} value={team.teamName}>{team.teamName}</option>});
+return <div class="select-container">
+<select>
+<option value={'Selecciona un equipo'}>Selecciona un equipo</option>
+{options}
+</select>
+</div>
+}
+}
+
+}
+
+//{this.createSelect()}
 
   render() {
     return (
-        <div class="select-container">
-          <Link to={`/finalized`} style={{ textDecoration: 'none' }}><button type="button" name="button">Finalizados</button></Link>
-          <Link to={`/scheduled`} style={{ textDecoration: 'none' }}><button type="button" name="button">Scheduled</button></Link>
+        <div>
+{this.createSelect()}
         </div>
       );
     }
