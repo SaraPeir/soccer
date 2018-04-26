@@ -29,14 +29,28 @@ class ScheduledMatchs extends Component {
   }
   }
 
+// defineValue(){
+// let word = 'Ciao';
+// if(this.state.selectValue == 'SSC Napoli'){
+// word = 'Forza Napoli';
+// } else{
+// word = 'Hola';
+// }
+// }
+
 
   render() {
-const hola = 'Hola';
+    let word = 'Ciao';
+    if(this.state.selectValue == 'SSC Napoli'){
+    word = 'Forza Napoli';
+    } else{
+    word = <div><MatchsDay matchsDaysList = {this.props.matchsDay} start = {330} end = {340}/></div>;
+    }
     return (
       <div class="scheduled-matchs-box">
       <Select onChangeSelectTeam = {this.selectTeam} teamsArray = {this.props.teamsNamesArray} selectedValue = {this.state.selectValue} />
       <ButtonsContainer />
-{hola}
+{word}
       </div>
     );
   }
