@@ -13,44 +13,33 @@ constructor(props) {
 super(props);
 this.state = {
 data: [],
-teamData: []
+teamDailyData: [],
+selectValue: 'Selecciona un equipo'
 }
+this.selectTeam = this.selectTeam.bind(this);
 }
 
-//http://api.football-data.org/v1/teams/113/fixtures
-//http://api.football-data.org/v1/teams/113/players
-//http://api.football-data.org/v1/teams/113
+selectTeam(event){
+this.setState({
+selectValue: event.target.value
+});
 
-// requestInfo2(){
-// const teamsCodes = ['Napoli': 113, 'Roma': 100, 'Lazio': 110, 'Inter': 108, 'Atalanta': 102, 'Fiorentina': 99, 'Milan': 98, 'Sampdoria': 584, 'Torino': 586, 'Genoa': 107, 'Bologna': 103,
-// 'Udinese': 115, 'Sassuolo': 471, 'Cagliari': 104, 'Chievo': 106, 'Spal': 1107, 'Crotone': 472, 'Hellas': 450, 'Benevento': 1106, 'Juve': 109];
-//
-// var apiRequest3 =  fetch(`http://api.football-data.org/v1/teams/${teamsCodes[7]/fixtures}`,
-//   { headers:  {'X-Auth-Token': '6ec492bfca974605a2522176f0b354eb'}}).then(response => response.json());
-//   var apiRequest3 =  fetch(`http://api.football-data.org/v1/teams/${teamsCodes[7]/players}`,
-//     { headers:  {'X-Auth-Token': '6ec492bfca974605a2522176f0b354eb'}}).then(response => response.json());
-//
-// var combinedData = [apiRequest3, apiRequest4];
-//
-// Promise.all(combinedData).then(d => {
-//   let footballData = this.state.data;
-//   footballData.push(d);
-//   this.setState({
-//           data:footballData
-//         });
-//
-// for (var i = 0; i < 20; i++) {
-// fetch(d[0].standing[i]._links.team.href, {headers:  {'X-Auth-Token': '6ec492bfca974605a2522176f0b354eb'}}).then(response => response.json())
-//     .then(f => {const footballTeamData = this.state.teamData;
-//     footballTeamData.push(f)
-//
-//     this.setState({
-//       teamData:footballTeamData
-//     });
-//     })
-// }
-//         })
-// }
+const teamData = this.state.data[0][1].fixtures;
+let teamName = event.target.value;
+
+  let filtered1 = teamData.filter(function(team) {
+      return team.homeTeamName == teamName;
+  });
+  let filtered2 = teamData.filter(function(team) {
+      return team.awayTeamName == teamName;
+  });
+let filtered = filtered1.concat(filtered2);
+let dailyOrderedFilteredArray = filtered.sort((a,b) => {return b.matchday - a.matchday});
+this.setState({
+  teamDailyData:dailyOrderedFilteredArray
+});
+
+}
 
 
 requestInfo() {
@@ -63,43 +52,8 @@ requestInfo() {
   this.setState({
     data:footballData
   });
-//   for (var i = 0; i < 20; i++) {
-//     fetch(d[0].standing[i]._links.team.href, {headers:  {'X-Auth-Token':'6ec492bfca974605a2522176f0b354eb'}}).then(response => response.json())
-//     .then(f => {const footballTeamData = this.state.teamData;
-//     footballTeamData.push(f)
-//     this.setState({
-//       teamData:footballTeamData
-//     });
-// })
-// }
 })
 }
-
-
-
-
-
-
-  // requestInfo() {
-  //     var apiRequest1 =  fetch(`http://api.football-data.org/v1/competitions/456/leagueTable`,
-  //       { headers:  {'X-Auth-Token': '6ec492bfca974605a2522176f0b354eb'}}).then(response => response.json());
-  //     var apiRequest2 = fetch(`http://api.football-data.org/v1/competitions/456/teams`, {headers:  {'X-Auth-Token': '6ec492bfca974605a2522176f0b354eb'}}).then(response => response.json());
-  //
-  //     var combinedData = [apiRequest1, apiRequest2];
-  //
-  //     Promise.all(combinedData).then(d => {
-  //       let footballData = this.state.data;
-  //       footballData.push(d)
-  //
-  //       this.setState({
-  //         data:footballData
-  //       });
-  //
-  //     }).catch(error => alert('error to load'));
-  // }
-
-
-
 
 componentDidMount(){
 this.requestInfo();
@@ -107,6 +61,7 @@ this.requestInfo();
 
   render() {
     const data = this.state.data;
+const teamDailyData = this.state.teamDailyData;
     return (
       <div>
       <Header />
@@ -114,7 +69,9 @@ this.requestInfo();
         <Route exact path='/' component={ Hero } />
         <Route path='/class' render={(props) => <SerieATable {...props} listData={data}/>}/>
         <Route path='/matchs' render={(props) => <Matchs {...props} matchsDay={data} teamsNamesArray = {data} />} />
-        <Route path='/scheduled' render={(props) => <ScheduledMatchs {...props} matchsDay={data} teamsNamesArray = {data} />} />
+
+        <Route path='/scheduled' render={(props) => <ScheduledMatchs {...props} matchsDay={data} matchsDayList={data} teamsNamesArray = {data} matchsTeam = {teamDailyData} onSelectTeam={this.selectTeam} onSelectValue = {this.state.selectValue} />} />
+
 <Route path='/programmed' render={(props) => <ToDoMatchs {...props} matchsDay={data} />} />
       </Switch>
       <Footer />
