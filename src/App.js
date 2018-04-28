@@ -67,8 +67,6 @@ const teamDailyData = this.state.teamDailyData;
         <Route exact path='/' component={ Hero } />
         <Route path='/class' render={(props) => <SerieATable {...props} listData={data}/>}/>
         <Route path='/scheduled' render={(props) => <ScheduledMatchs {...props} matchsDay={data} matchsDayList={data} teamsNamesArray = {data} matchsTeam = {teamDailyData} onSelectTeam={this.selectTeam} onSelectValue = {this.state.selectValue} />} />
-
-
       </Switch>
       <Footer />
       </div>
