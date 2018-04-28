@@ -34,7 +34,7 @@ let teamName = event.target.value;
       return team.awayTeamName == teamName;
   });
 let filtered = filtered1.concat(filtered2);
-let dailyOrderedFilteredArray = filtered.sort((a,b) => {return b.matchday - a.matchday});
+let dailyOrderedFilteredArray = filtered.sort((a,b) => {return a.matchday - b.matchday});
 this.setState({
   teamDailyData:dailyOrderedFilteredArray
 });

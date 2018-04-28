@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import './MatchsDay.css';
 import { BrowserRouter, Link, Route, Switch } from 'react-router-dom';
 import ButtonsContainer from './ButtonsContainer';
-import MatchCard from './MatchCard';
+import MatchCardSingleTeam from './MatchCardSingleTeam';
 
 
 class MatchsDaySingleTeam extends Component {
@@ -14,13 +14,24 @@ if(this.props.matchsList !== undefined){
   if(length > 0) {
   if(this.props.arrayTeams !== undefined){
   for (let i = 0; i < this.props.arrayTeams.length; i++){
-  array.push(<MatchCard
+
+  const status = (this.props.arrayTeams[i].status == 'SCHEDULED')?
+              ('PROGRAMADO')
+              :  ((this.props.arrayTeams[i].status == 'FINISHED')? 'FINALIZADO' : 'PROXIMO PARTIDO');
+
+const constSpecialTypo = (this.props.arrayTeams[i].status == 'TIMED') ? 'next-match-typo' : '';
+
+  array.push(<MatchCardSingleTeam
+status = {status}
+specialTypo = {constSpecialTypo}
+date = {this.props.arrayTeams[i].date}
   matchday = {this.props.arrayTeams[i].matchday}
   homeTeam = {this.props.arrayTeams[i].homeTeamName}
   awayTeam = {this.props.arrayTeams[i].awayTeamName}
   homeScore = {this.props.arrayTeams[i].result.goalsHomeTeam}
   awayScore = {this.props.arrayTeams[i].result.goalsAwayTeam}
   />);
+
   }
 return array;
   }

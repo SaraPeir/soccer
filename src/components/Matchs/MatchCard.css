@@ -30,3 +30,8 @@ color: blue;
 text-align: center;
 font-size: 25px;
 }
+
+#next-match-typo{
+font-weight: bold;
+color: red;
+}

@@ -4,13 +4,16 @@ import { BrowserRouter, Link, Route, Switch } from 'react-router-dom';
 
 
 
-class MatchCard extends Component {
+class MatchCardSingleTeam extends Component {
   render() {
+
 
     return (
         <div class="match-card-container">
           <div class="date-container">
-            <p>{this.props.matchday}</p>
+            <p>Jornada {this.props.matchday}</p>
+<p>{this.props.date}</p>
+<p id = {this.props.specialTypo}>{this.props.status}</p>
           </div>
 
           <div class="teams-container">
@@ -26,4 +29,4 @@ class MatchCard extends Component {
     }
   }
 
-export default MatchCard;
+export default MatchCardSingleTeam;
