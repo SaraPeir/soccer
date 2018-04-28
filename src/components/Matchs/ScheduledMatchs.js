@@ -15,7 +15,9 @@ class ScheduledMatchs extends Component {
 
   render() {
     let word = '';
+
     if(this.props.onSelectValue !== 'Selecciona un equipo'){
+
 word = <div><MatchsDaySingleTeam matchsList = {this.props.matchsDayList} arrayTeams = {this.props.matchsTeam} /></div>;
     } else{
     word =

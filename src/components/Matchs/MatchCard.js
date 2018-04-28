@@ -11,6 +11,7 @@ class MatchCard extends Component {
         <div class="match-card-container">
           <div class="date-container">
             <p>{this.props.matchday}</p>
+<p>{this.props.date}</p>
           </div>
 
           <div class="teams-container">
