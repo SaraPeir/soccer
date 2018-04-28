@@ -16,12 +16,16 @@ class ScheduledMatchs extends Component {
   render() {
     let word = '';
 
-    if(this.props.onSelectValue !== 'Selecciona un equipo'){
+    if(this.props.onSelectValue !== 'Todos los equipos'){
 
 word = <div><MatchsDaySingleTeam matchsList = {this.props.matchsDayList} arrayTeams = {this.props.matchsTeam} /></div>;
     } else{
     word =
 <div>
+<MatchsDay matchsDaysList = {this.props.matchsDay} start = {370} end = {380}/>
+<MatchsDay matchsDaysList = {this.props.matchsDay} start = {360} end = {370}/>
+<MatchsDay matchsDaysList = {this.props.matchsDay} start = {350} end = {360}/>
+<MatchsDay matchsDaysList = {this.props.matchsDay} start = {340} end = {350}/>
     <MatchsDay matchsDaysList = {this.props.matchsDay} start = {330} end = {340}/>
     <MatchsDay matchsDaysList = {this.props.matchsDay} start = {320} end = {330}/>
     <MatchsDay matchsDaysList = {this.props.matchsDay} start = {310} end = {320}/>
@@ -65,7 +69,7 @@ word = <div><MatchsDaySingleTeam matchsList = {this.props.matchsDayList} arrayTe
     return (
       <div class="scheduled-matchs-box">
       <Select onChangeSelectTeam = {this.props.onSelectTeam} teamsArray = {this.props.teamsNamesArray} selectedValue = {this.props.onSelectValue} />
-      <ButtonsContainer />
+
 {word}
       </div>
     );

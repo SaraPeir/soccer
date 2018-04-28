@@ -22,7 +22,7 @@ return (
 </HeaderBoxLeft>
 <HeaderBoxRight>
 <Link to={`/`} style={{ textDecoration: 'none' }}>  <MenuButton>Home </MenuButton></Link>  <Link to={`/class`} style={{ textDecoration: 'none' }}><MenuButton>Lista </MenuButton></Link>
-<Link to={`/matchs`} style={{ textDecoration: 'none' }}><MenuButton>Partidos </MenuButton></Link>
+<Link to={`/scheduled`} style={{ textDecoration: 'none' }}><MenuButton>Partidos </MenuButton></Link>
 </HeaderBoxRight>
 </HeaderBox>
 </div>

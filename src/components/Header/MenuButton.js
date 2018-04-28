@@ -17,6 +17,8 @@ transition: all 1s ease;
 &:hover {
 color: ${colors.primary};
 background: ${colors.light};
+font-size: 32px;
+font-weight: bold;
 }
 `;
 

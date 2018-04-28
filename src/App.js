@@ -3,8 +3,6 @@ import Header from './components/Header/Header';
 import Hero from './components/Hero/Hero';
 import Footer from './components/Footer/Footer';
 import SerieATable from './components/SerieATable/SerieATable';
-import Matchs from './components/Matchs/Matchs';
-import ToDoMatchs from './components/Matchs/ToDoMatchs';
 import ScheduledMatchs from './components/Matchs/ScheduledMatchs';
 import { BrowserRouter, Link, Route, Switch } from 'react-router-dom';
 
@@ -14,7 +12,7 @@ super(props);
 this.state = {
 data: [],
 teamDailyData: [],
-selectValue: 'Selecciona un equipo'
+selectValue: 'Todos los equipos'
 }
 this.selectTeam = this.selectTeam.bind(this);
 }
@@ -68,11 +66,11 @@ const teamDailyData = this.state.teamDailyData;
       <Switch>
         <Route exact path='/' component={ Hero } />
         <Route path='/class' render={(props) => <SerieATable {...props} listData={data}/>}/>
-        <Route path='/matchs' render={(props) => <Matchs {...props} matchsDay={data} teamsNamesArray = {data} />} />
+
 
         <Route path='/scheduled' render={(props) => <ScheduledMatchs {...props} matchsDay={data} matchsDayList={data} teamsNamesArray = {data} matchsTeam = {teamDailyData} onSelectTeam={this.selectTeam} onSelectValue = {this.state.selectValue} />} />
 
-<Route path='/programmed' render={(props) => <ToDoMatchs {...props} matchsDay={data} />} />
+
       </Switch>
       <Footer />
       </div>
@@ -81,3 +79,6 @@ const teamDailyData = this.state.teamDailyData;
 }
 
 export default App;
+
+// <Route path='/programmed' render={(props) => <ToDoMatchs {...props} matchsDay={data} />} />
+// <Route path='/matchs' render={(props) => <Matchs {...props} matchsDay={data} teamsNamesArray = {data} />} />

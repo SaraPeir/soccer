@@ -15,7 +15,7 @@ var dayMatch = '';
    let length = this.props.matchsDaysList.length;
    if(length > 0) {
  for (let i = this.props.start; i < this.props.end; i++){
-dayMatch = `Jornada #${this.props.matchsDaysList[0][1].fixtures[i].matchday}`
+dayMatch = `Jornada ${this.props.matchsDaysList[0][1].fixtures[i].matchday}`
  }
 return dayMatch;
  }
@@ -26,6 +26,7 @@ return dayMatch;
    daysCards(){
 var array = [];
 let exactDate = '';
+let matchStatus = '';
   if(this.props.matchsDaysList !== undefined){
     let length = this.props.matchsDaysList.length;
     if(length > 0) {
@@ -159,44 +160,71 @@ exactDate = '24-02-2018';
 exactDate = '25-02-2018';
 } else if(this.props.matchsDaysList[0][1].fixtures[i].date.includes('2018-02-26')){
 exactDate = '26-02-2018';
+} else if(this.props.matchsDaysList[0][1].fixtures[i].date.includes('2018-03-03')){
+exactDate = '03-03-2018';
+} else if(this.props.matchsDaysList[0][1].fixtures[i].date.includes('2018-03-09')){
+exactDate = '09-03-2018';
+} else if(this.props.matchsDaysList[0][1].fixtures[i].date.includes('2018-03-10')){
+exactDate = '10-03-2018';
+} else if(this.props.matchsDaysList[0][1].fixtures[i].date.includes('2018-03-11')){
+exactDate = '11-03-2018';
+} else if(this.props.matchsDaysList[0][1].fixtures[i].date.includes('2018-03-14')){
+exactDate = '14-03-2018';
+} else if(this.props.matchsDaysList[0][1].fixtures[i].date.includes('2018-03-17')){
+exactDate = '17-03-2018';
+} else if(this.props.matchsDaysList[0][1].fixtures[i].date.includes('2018-03-18')){
+exactDate = '18-03-2018';
+} else if(this.props.matchsDaysList[0][1].fixtures[i].date.includes('2018-03-31')){
+exactDate = '31-03-2018';
+} else if(this.props.matchsDaysList[0][1].fixtures[i].date.includes('2018-04-03')){
+exactDate = '03-04-2018';
+} else if(this.props.matchsDaysList[0][1].fixtures[i].date.includes('2018-04-04')){
+exactDate = '04-04-2018';
+} else if(this.props.matchsDaysList[0][1].fixtures[i].date.includes('2018-04-07')){
+exactDate = '07-04-2018';
+} else if(this.props.matchsDaysList[0][1].fixtures[i].date.includes('2018-04-08')){
+exactDate = '08-04-2018';
+} else if(this.props.matchsDaysList[0][1].fixtures[i].date.includes('2018-04-14')){
+exactDate = '14-04-2018';
+} else if(this.props.matchsDaysList[0][1].fixtures[i].date.includes('2018-04-15')){
+exactDate = '15-04-2018';
+} else if(this.props.matchsDaysList[0][1].fixtures[i].date.includes('2018-04-17')){
+exactDate = '17-04-2018';
+} else if(this.props.matchsDaysList[0][1].fixtures[i].date.includes('2018-04-18')){
+exactDate = '18-04-2018';
+} else if(this.props.matchsDaysList[0][1].fixtures[i].date.includes('2018-04-22')){
+exactDate = '22-04-2018';
+} else if(this.props.matchsDaysList[0][1].fixtures[i].date.includes('2018-04-23')){
+exactDate = '23-04-2018';
+} else if(this.props.matchsDaysList[0][1].fixtures[i].date.includes('2018-04-29')){
+exactDate = '29-04-2018';
+} else if(this.props.matchsDaysList[0][1].fixtures[i].date.includes('2018-05-06')){
+exactDate = '06-05-2018';
+} else if(this.props.matchsDaysList[0][1].fixtures[i].date.includes('2018-05-13')){
+exactDate = '13-05-2018';
+} else if(this.props.matchsDaysList[0][1].fixtures[i].date.includes('2018-05-20')){
+exactDate = '20-05-2018';
 }
 
-// if(this.props.matchsDaysList[0][1].fixtures[i].date == '2018-04-22T13:00:00Z'){
-// exactDate = '22-04-2018';
-// } else if(this.props.matchsDaysList[0][1].fixtures[i].date == '2018-04-23T18:45:00Z'){
-// exactDate = '23-04-2018';
-// } else if(this.props.matchsDaysList[0][1].fixtures[i].date == '2018-04-17T18:45:00Z'){
-// exactDate = '17-04-2018';
-// } else if(this.props.matchsDaysList[0][1].fixtures[i].date == '2018-04-18T18:45:00Z'){
-// exactDate = '18-04-2018';
-// } else if(this.props.matchsDaysList[0][1].fixtures[i].date == '2018-04-18T16:00:00Z'){
-// exactDate = '18-04-2018';
-// } else if(this.props.matchsDaysList[0][1].fixtures[i].date == '2018-04-14T13:00:00Z'){
-// exactDate = '14-04-2018';
-// } else if(this.props.matchsDaysList[0][1].fixtures[i].date == '2018-04-14T16:00:00Z'){
-// exactDate = '14-04-2018';
-// } else if(this.props.matchsDaysList[0][1].fixtures[i].date == '2018-04-14T18:45:00Z'){
-// exactDate = '14-04-2018';
-// } else if(this.props.matchsDaysList[0][1].fixtures[i].date == '2018-04-15T10:30:00Z'){
-// exactDate = '15-04-2018';
-// } else if(this.props.matchsDaysList[0][1].fixtures[i].date == '2018-04-15T13:00:00Z'){
-// exactDate = '15-04-2018';
-// } else if(this.props.matchsDaysList[0][1].fixtures[i].date == '2018-04-15T16:00:00Z'){
-// exactDate = '15-04-2018';
-// } else if(this.props.matchsDaysList[0][1].fixtures[i].date == '2018-04-15T18:45:00Z'){
-// exactDate = '15-04-2018';
-// } else if(this.props.matchsDaysList[0][1].fixtures[i].date == '2018-04-07T13:00:00Z'){
-// exactDate = '07-04-2018';
-// }
+const toHideClass = (this.props.matchsDaysList[0][1].fixtures[i].status == 'FINISHED') ? '' : 'hidden';
 
-// 2018-04-07T16:00:00Z
-// 2018-04-07T18:45:00Z
-// 2018-04-08T10:30:00Z
+const constSpecialTypo = (this.props.matchsDaysList[0][1].fixtures[i].status == 'TIMED') ? 'next-match-typo' : '';
+
+if(this.props.matchsDaysList[0][1].fixtures[i].status == 'FINISHED'){
+matchStatus = 'FINALIZADO';
+} else if(this.props.matchsDaysList[0][1].fixtures[i].status == 'SCHEDULED'){
+matchStatus = 'PROGRAMADO';
+} else{
+  matchStatus = 'PROXIMO PARTIDO';
+}
 
 
   array.push(<MatchCard
   matchday = {this.props.matchsDaysList[0][1].fixtures[i].matchday}
 date = {exactDate}
+toHide = {toHideClass}
+status = {matchStatus}
+specialTypo = {constSpecialTypo}
   homeTeam = {this.props.matchsDaysList[0][1].fixtures[i].homeTeamName}
   awayTeam = {this.props.matchsDaysList[0][1].fixtures[i].awayTeamName}
   homeScore = {this.props.matchsDaysList[0][1].fixtures[i].result.goalsHomeTeam}

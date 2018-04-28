@@ -21,7 +21,7 @@ class MatchCardSingleTeam extends Component {
           </div>
 
           <div class="scores-container">
-           <p>{this.props.homeScore} - {this.props.awayScore}</p>
+           <p className = {this.props.toHide}>{this.props.homeScore} - {this.props.awayScore}</p>
           </div>
 
         </div>

@@ -15,7 +15,7 @@ var dayMatch = '';
    let length = this.props.matchsDaysList.length;
    if(length > 0) {
  for (let i = this.props.start; i < this.props.end; i++){
-dayMatch = `Jornada #${this.props.matchsDaysList[0][1].fixtures[i].matchday} - Recupero partidos`
+dayMatch = `Jornada ${this.props.matchsDaysList[0][1].fixtures[i].matchday} - Recupero partidos`
  }
 return dayMatch;
  }

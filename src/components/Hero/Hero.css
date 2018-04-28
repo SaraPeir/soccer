@@ -1,7 +1,6 @@
 .slider {
   width: 100%;
   margin: auto;
-  border: 2px solid red;
   overflow: hidden;
 }
 
@@ -18,10 +17,12 @@
   list-style: none;
   width: 100%;
   background: green;
+height: 800px;
 }
 
 .slider img{
   width: 100%;
+margin-top: -150px;
 }
 
 @keyframes changeSlide {

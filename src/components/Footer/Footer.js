@@ -9,7 +9,7 @@ class Footer extends Component {
     return (
       <div>
       <FooterBox>
-      <FooterTitle> Futból <FooterText> By Sara Ⓒ 2018 </FooterText></FooterTitle>
+      <FooterTitle> Fútbol <FooterText> By Sara Ⓒ 2018 </FooterText></FooterTitle>
 
       </FooterBox>
       </div>

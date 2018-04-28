@@ -8,18 +8,19 @@ class MatchCard extends Component {
   render() {
 
     return (
-        <div class="match-card-container">
-          <div class="date-container">
-            <p>{this.props.matchday}</p>
+        <div className="match-card-container">
+          <div className="date-container">
 <p>{this.props.date}</p>
           </div>
 
-          <div class="teams-container">
+          <div className="teams-container">
             <p>{this.props.homeTeam} - {this.props.awayTeam}</p>
+
           </div>
 
-          <div class="scores-container">
-           <p>{this.props.homeScore} - {this.props.awayScore}</p>
+          <div className="scores-container">
+<p id = {this.props.specialTypo}>{this.props.status}</p>
+           <p className = {this.props.toHide}>{this.props.homeScore} - {this.props.awayScore}</p>
           </div>
 
         </div>

@@ -17,14 +17,13 @@ let options = teamsInternalArray.map((team, index) =>
 {return <option key={index} value={team.teamName}>{team.teamName}</option>});
 return <div class="select-container">
 <select value = {this.props.selectedValue} onChange = {this.props.onChangeSelectTeam}>
-<option value={'Selecciona un equipo'}>Selecciona un equipo</option>
+<option value={'Todos los equipos'}>Todos los equipos</option>
 {options}
 </select>
 </div>
 }
 }
 }
-
 
   render() {
     return (
