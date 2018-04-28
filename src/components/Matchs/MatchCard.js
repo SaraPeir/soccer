@@ -13,6 +13,7 @@ class MatchCard extends Component {
 <p>{this.props.date}</p>
           </div>
 
+
           <div className="teams-container">
             <p>{this.props.homeTeam} - {this.props.awayTeam}</p>
 
