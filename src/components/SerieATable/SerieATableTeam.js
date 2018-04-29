@@ -17,6 +17,7 @@ class SerieATableTeam extends Component {
     </SerieATeamTableData>
     <SerieATeamTableData>
           <p>{this.props.team}</p>
+<img src={this.props.url} alt="" />
     </SerieATeamTableData>
     <SerieATeamTableData>
         <p>{this.props.score}</p>

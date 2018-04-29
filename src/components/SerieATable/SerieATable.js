@@ -23,6 +23,7 @@ class SerieATable extends Component {
             position={positionTeam[0].standing.map((ps, index) => {
             return <div key={index}>{ps.position}</div>})}
 
+
             team={positionTeam[0].standing.map((tm, index) => {
             return <div key={index}>{tm.teamName}</div>})}
 
@@ -31,7 +32,7 @@ class SerieATable extends Component {
 
             score={positionTeam[0].standing.map((sc, index) => {
             return <div key={index}>{sc.points}</div>})}
-            
+
             />
             </div>
               )})

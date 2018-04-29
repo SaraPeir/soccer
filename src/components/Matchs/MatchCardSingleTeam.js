@@ -11,17 +11,17 @@ class MatchCardSingleTeam extends Component {
     return (
         <div class="match-card-container">
           <div class="date-container">
-            <p>Jornada {this.props.matchday}</p>
-<p>{this.props.date}</p>
-<p id = {this.props.specialTypo}>{this.props.status}</p>
+            <p id="typo5">Jornada {this.props.matchday}</p>
+<p id="typo1">{this.props.date}</p>
+<p className="typo3" id = {this.props.specialTypo}>{this.props.status}</p>
           </div>
 
           <div class="teams-container">
-            <p>{this.props.homeTeam} - {this.props.awayTeam}</p>
+            <p id="typo2">{this.props.homeTeam} - {this.props.awayTeam}</p>
           </div>
 
           <div class="scores-container">
-           <p className = {this.props.toHide}>{this.props.homeScore} - {this.props.awayScore}</p>
+           <p id="typo4" className = {this.props.toHide}>{this.props.homeScore} - {this.props.awayScore}</p>
           </div>
 
         </div>
