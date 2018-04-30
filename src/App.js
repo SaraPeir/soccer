@@ -41,8 +41,8 @@ this.setState({
 
 
 requestInfo() {
-  var apiRequest1 =  fetch(`http://api.football-data.org/v1/competitions/456/leagueTable`, { headers:  {'X-Auth-Token': '6ec492bfca974605a2522176f0b354eb'}}).then(response => response.json());
-  var apiRequest2 = fetch(`http://api.football-data.org/v1/competitions/456/fixtures`, {headers:  {'X-Auth-Token': '6ec492bfca974605a2522176f0b354eb'}}).then(response => response.json());
+  var apiRequest1 =  fetch(`https://api.football-data.org/v1/competitions/456/leagueTable`, { headers:  {'X-Auth-Token': '6ec492bfca974605a2522176f0b354eb'}}).then(response => response.json());
+  var apiRequest2 = fetch(`https://api.football-data.org/v1/competitions/456/fixtures`, {headers:  {'X-Auth-Token': '6ec492bfca974605a2522176f0b354eb'}}).then(response => response.json());
   var combinedData = [apiRequest1, apiRequest2];
   Promise.all(combinedData).then(d => {
   let footballData = this.state.data;
