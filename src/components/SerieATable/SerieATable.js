@@ -4,6 +4,7 @@ import {colors} from '../../Styles/Variables';
 import SerieATableBox from './SerieATableBox';
 import SerieATableTeam from './SerieATableTeam';
 import SerieATableTeamLegend from './SerieATableTeamLegend';
+import SerieATitleContainer from './SerieATitleContainer';
 import { BrowserRouter, Link, Route, Switch } from 'react-router-dom';
 
 class SerieATable extends Component {
@@ -58,8 +59,10 @@ class SerieATable extends Component {
             return (
               <div>
               <SerieATableBox>
+              <SerieATitleContainer>
               <h1>{captionTitle}</h1>
               <h2>Posiciones - Jornada #{day}</h2>
+              </SerieATitleContainer>
               <SerieATableTeamLegend />
               {this.getResult()}
               </SerieATableBox>
