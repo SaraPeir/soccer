@@ -10,10 +10,13 @@ flex-direction: column;
 position: fixed;
 justify-content: center;
 align-items: center;
-top: 760px;
-height: 10vh;
+top: 650px;
+height: 20vh;
 background: ${colors.primary};
 z-index: 100;
+@media (max-width: 1000px) {
+   top: 620px;
+ }
 `;
 
 

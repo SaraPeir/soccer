@@ -12,10 +12,10 @@ class Hero extends Component {
           return (
             <div class="slider">
               <ul>
-                <li><Sentence>¿El futbol te apasiona desde cuando eras un niño?</Sentence><img src={Image6}   alt="" />
+                <li><Sentence>¿El futbol te apasiona desde cuando eras un niño?</Sentence><img src={Image6} id="large-screen" alt="" />
               </li>
-                <li><Sentence>¿Te gustaría estar siempre actualizado de todas las noticias relativas a los partidos?</Sentence><img src={Image4}   alt="" /></li>
-                <li><Sentence>¡Bienvenido en Fútbol - Serie A!</Sentence><img src={Image5}   alt="" /></li>
+                <li><Sentence>¿Te gustaría estar siempre actualizado de todas las noticias relativas a los partidos?</Sentence><img src={Image4} id="large-screen"  alt="" /></li>
+                <li><Sentence>¡Bienvenido en Fútbol - Serie A!</Sentence><img src={Image5} id="large-screen"   alt="" /></li>
               </ul>
             </div>
           );

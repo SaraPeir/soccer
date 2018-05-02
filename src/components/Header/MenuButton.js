@@ -6,7 +6,6 @@ import {colors} from '../../Styles/Variables';
 const MenuButton = styled.div`
 color: ${colors.light};
 font-size: 25px;
-
 background: ${colors.primary};
 text-align: center;
 width: 150px;
@@ -14,11 +13,15 @@ line-height: 10vh;
 height: 100%;
 cursor: pointer;
 transition: all 1s ease;
+@media (max-width: 1000px) {
+   line-height: 20vh;
+ }
 &:hover {
 color: ${colors.primary};
 background: ${colors.light};
 font-size: 32px;
 font-weight: bold;
+
 }
 `;
 

@@ -17,12 +17,17 @@
   list-style: none;
   width: 100%;
   background: green;
-height: 800px;
+  height: 1050px;
 }
 
-.slider img{
+/*.slider img{
+
+}*/
+
+#large-screen{
   width: 100%;
-margin-top: -150px;
+  margin-top: -150px;
+height: 100%;
 }
 
 @keyframes changeSlide {
@@ -34,5 +39,18 @@ margin-top: -150px;
 
   70% {margin-left: -200%;}
   100% {margin-left: -200%;}
+}
 
+@media screen and (max-width: 1000px) {
+  #large-screen {
+    /*display: none;*/
+height: 100%;
+  }
+.slider li {
+/*//background-image:url('../../Images/grass-background.jpg');*/
+height: 720px;
+}
+.slider ul{
+margin-top: 100px;
+}
 }

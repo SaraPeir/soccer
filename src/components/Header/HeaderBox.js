@@ -13,6 +13,10 @@ line-height: 10vh;
 color: black;
 background: ${colors.primary};
 z-index: 100;
+@media (max-width: 1000px) {
+   height: 20vh;
+line-height: 20vh;
+ }
 `;
 
 
