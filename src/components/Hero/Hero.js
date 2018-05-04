@@ -12,10 +12,9 @@ class Hero extends Component {
           return (
             <div class="slider">
               <ul>
-                <li><Sentence>¿El futbol te apasiona desde cuando eras un niño?</Sentence><img src={Image6} id="large-screen" alt="" />
-              </li>
-                <li><Sentence>¿Te gustaría estar siempre actualizado de todas las noticias relativas a los partidos?</Sentence><img src={Image4} id="large-screen"  alt="" /></li>
-                <li><Sentence>¡Bienvenido en Fútbol - Serie A!</Sentence><img src={Image5} id="large-screen"   alt="" /></li>
+                <li id="li1"><Sentence>¿El futbol te apasiona desde cuando eras un niño?</Sentence></li>
+                <li id="li2"><Sentence>¿Te gustaría estar siempre actualizado de todas las noticias relativas a los partidos?</Sentence></li>
+                <li id="li3"><Sentence>¡Bienvenido en Fútbol - Serie A!</Sentence></li>
               </ul>
             </div>
           );
@@ -23,7 +22,3 @@ class Hero extends Component {
       }
 
 export default Hero;
-
-// <img src={Image6}   alt="" />
-// <img src={Image4} alt="" />
-// <img src={Image5}  alt="" />

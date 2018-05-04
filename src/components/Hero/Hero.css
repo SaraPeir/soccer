@@ -16,18 +16,44 @@
 .slider li{
   list-style: none;
   width: 100%;
-  background: green;
+  background: red;
   height: 1050px;
 }
 
-/*.slider img{
-
-}*/
-
-#large-screen{
+#large-screen1{
   width: 100%;
   margin-top: -150px;
 height: 100%;
+}
+
+#large-screen2{
+  width: 100%;
+  margin-top: -150px;
+height: 100%;
+}
+
+#li1 {
+background-image:url('../../Images/Image6.jpg');
+background-size: cover;
+background-position: center;
+margin-top: -100px;
+width: 100%;
+}
+
+#li2 {
+background-image:url('../../Images/Image4.jpeg');
+background-size: cover;
+background-position: center;
+margin-top: -100px;
+width: 100%;
+}
+
+#li3 {
+background-image:url('../../Images/Image5.jpg');
+background-size: cover;
+background-position: center;
+margin-top: -100px;
+width: 100%;
 }
 
 @keyframes changeSlide {
@@ -42,14 +68,15 @@ height: 100%;
 }
 
 @media screen and (max-width: 1000px) {
-  #large-screen {
-    /*display: none;*/
-height: 100%;
-  }
-.slider li {
-/*//background-image:url('../../Images/grass-background.jpg');*/
-height: 720px;
+
+
+.slider ul{
+margin-top: 100px;
 }
+}
+
+@media screen and (max-width: 750px) {
+
 .slider ul{
 margin-top: 100px;
 }
